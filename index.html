@@ -1,47 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AI Study Helper v9</title>
-  <link rel="stylesheet" href="style.css">
+  <title>AI Study Helper</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 100px auto;
+      background: #111827;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px;
+      width: 95%;
+      border-radius: 10px;
+      border: none;
+      background: #3b82f6;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+
+    #answer {
+      margin-top: 20px;
+      text-align: left;
+      background: #1f2937;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .tabs button {
+      width: auto;
+      padding: 8px 10px;
+      font-size: 14px;
+      background: #374151;
+    }
+
+    .tabs button:hover {
+      background: #4b5563;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>📚 AI Study Helper</h1>
+<div class="container">
+  <h1>📚 AI Study Helper</h1>
 
-<div class="menu">
-  <button onclick="showSection('search')">Search 🔍</button>
-  <button onclick="showSection('chat')">Chat 💬</button>
-  <button onclick="showSection('test')">Test 📝</button>
-  <button onclick="showSection('progress')">Progress 📊</button>
-</div>
+  <div class="tabs">
+    <button>Search</button>
+    <button>Chat</button>
+    <button>Test</button>
+    <button>Progress</button>
+  </div>
 
-<div id="search" class="section">
-  <h2>Search Topic</h2>
-  <input type="text" id="searchInput" placeholder="Enter topic">
-  <button onclick="searchTopic()">Search</button>
-  <p id="searchResult"></p>
-</div>
+  <input id="q" placeholder="Ask any topic..." />
+  <button onclick="ask()">Ask AI</button>
 
-<div id="chat" class="section">
-  <h2>Chat Doubt</h2>
-  <input type="text" id="chatInput" placeholder="Ask doubt">
-  <button onclick="chatDoubt()">Ask</button>
-  <p id="chatResult"></p>
-</div>
-
-<div id="test" class="section">
-  <h2>Simple Test</h2>
-  <p>2 + 2 = ?</p>
-  <input type="text" id="testAnswer">
-  <button onclick="checkTest()">Submit</button>
-  <p id="testResult"></p>
-</div>
-
-<div id="progress" class="section">
-  <h2>Progress</h2>
-  <p id="progressData"></p>
+  <div id="answer">Your answer will appear here...</div>
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
