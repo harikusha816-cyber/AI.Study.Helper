@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Study Helper v9</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>📚 AI Study Helper</h1>
+
+<div class="menu">
+  <button onclick="showSection('search')">Search 🔍</button>
+  <button onclick="showSection('chat')">Chat 💬</button>
+  <button onclick="showSection('test')">Test 📝</button>
+  <button onclick="showSection('progress')">Progress 📊</button>
+</div>
+
+<div id="search" class="section">
+  <h2>Search Topic</h2>
+  <input type="text" id="searchInput" placeholder="Enter topic">
+  <button onclick="searchTopic()">Search</button>
+  <p id="searchResult"></p>
+</div>
+
+<div id="chat" class="section">
+  <h2>Chat Doubt</h2>
+  <input type="text" id="chatInput" placeholder="Ask doubt">
+  <button onclick="chatDoubt()">Ask</button>
+  <p id="chatResult"></p>
+</div>
+
+<div id="test" class="section">
+  <h2>Simple Test</h2>
+  <p>2 + 2 = ?</p>
+  <input type="text" id="testAnswer">
+  <button onclick="checkTest()">Submit</button>
+  <p id="testResult"></p>
+</div>
+
+<div id="progress" class="section">
+  <h2>Progress</h2>
+  <p id="progressData"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
